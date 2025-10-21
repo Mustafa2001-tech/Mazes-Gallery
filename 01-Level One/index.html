@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level One</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fafafa; margin: 0; padding: 0; text-align: center; }
+    h1 { background: #222; color: white; padding: 20px; margin: 0; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 20px; }
+    img { width: 250px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.3); transition: transform 0.2s; }
+    img:hover { transform: scale(1.05); }
+    a.back { display: block; text-decoration: none; color: #0077cc; margin: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Level One</h1>
+  <a class="back" href="../index.html">← Back to Main Gallery</a>
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    const totalImages = 20; // number of images in this folder
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement('img');
+      img.src = `${i}.jpg`;  // your images must be named 1.jpg, 2.jpg, ... 20.jpg
+      gallery.appendChild(img);
+    }
+  </script>
+</body>
+</html>
